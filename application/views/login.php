@@ -57,7 +57,7 @@
     }
   </script>
 
-  <link rel="stylesheet" href="./css/common.css" media="screen">
+  <link rel="stylesheet" href="./css/common.css" media="all">
   <body>
     <header id="Login_title">
       <img src="./img/title.jpg"/>

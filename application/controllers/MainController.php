@@ -1,4 +1,5 @@
 <?php
+require_once "ListController.php";
 class MainController extends CI_Controller{
 
   function __construct(){
@@ -36,10 +37,12 @@ class MainController extends CI_Controller{
       //비밀번호 검사
       if($check){
         //로그인됨
-        $SESSION['id'] = $id;
-        $SESSION['time'] = date('h:i:s');
 
-        $this->load->view('main',$SESSION);
+        $data['id'] = $id;
+        $data['time'] = date('h:i:s');
+
+        $login = new ListController($data);
+        $login->ShowTimeLine();
         return;
       }else{
         //로그인실패
